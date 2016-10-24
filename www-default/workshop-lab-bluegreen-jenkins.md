@@ -1,8 +1,8 @@
 ---
 layout: lab
-title: Blue-green Deployment with Jenkins
+title: Pipeline Deployment with Jenkins
 subtitle:
-html_title: Blue/Green
+html_title: Pipeline Deployment with Jenkins
 categories: [lab, ops, blue, green]
 ---
 
