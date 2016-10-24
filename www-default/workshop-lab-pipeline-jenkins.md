@@ -6,11 +6,6 @@ html_title: Pipeline Deployment with Jenkins
 categories: [lab, ops, blue, green]
 ---
 
-## Blue/Green deployments
-When implementing continuous delivery for your software, one very useful technique is called Blue/Green deployments.  It addresses the desire to minimize downtime during the release of a new version of an application to production.  Essentially, it involves running two production versions of your app side-by-side and then switching the routing from the last stable version to the new version once it is verified.  Using OpenShift, this can be very seamless because using containers we can easily and rapidly deploy a duplicate infrastructure to support alternate versions and modify routes as a service.  In this lab, we will walk through a simple Blue/Green Jenkins Pipeline with an simple web application on OpenShift.
-
-
-
 ### Let's Login
 
 >Navigate to the URI provided by your instructor and log in with the user/password provided.
@@ -111,11 +106,3 @@ When implementing continuous delivery for your software, one very useful techniq
 >Your Instructor will make a quick code change in the Git Repository for the app to go from Blue to Green.  Once the change is made, repeat the steps above to create a new S2I Build Pipeline changing your deployments in Dev, QA, and Production from Blue to Green
 
 <p><img alt="login to OSE" src="{{ site.baseurl }}/www-default/screenshots/ose-lab-bluegreen-jekins-devappgreen.png" width="500"/></p>
-
-## Summary
-Pretty easy, right?
-
-If you want to read more about Blue/Green check out [this post][2] with a longer description as well as links to additional resources.
-
-[1]: https://github.com/VeerMuchandi/bluegreen
-[2]: http://martinfowler.com/bliki/BlueGreenDeployment.html

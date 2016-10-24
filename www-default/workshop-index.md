@@ -27,7 +27,7 @@ html_title: Workshops
 
 ### [Lab: Blue-green Deployment](workshop-lab-bluegreen.html)
 
-### [Lab: Pipeline Deployment with Jenkins](workshop-lab-bluegreen-jenkins.html)
+### [Lab: Pipeline Deployment with Jenkins](workshop-lab-pipeline-jenkins.html)
 
 ### [Lab: xPaaS (JBoss EAP)](workshop-lab-jboss.html)
 
