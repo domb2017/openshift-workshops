@@ -1,7 +1,7 @@
 ---
 layout: lab
 title: Autoscaling Apps
-subtitle: 
+subtitle:
 html_title: Autoscaling
 categories: [lab, developers, ops]
 ---
