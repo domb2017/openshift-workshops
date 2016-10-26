@@ -2,21 +2,21 @@
 ## Info
 This is a [jekyll][1] based website.  It lives along side the code base in a branch called gh-pages.  Don't merge this branch with the code.  You can access the released version of this website at: http://dudash.github.io/openshift-workshops/
 
-[READ THIS BEFORE CONTRIBUTING][3].
+[READ THIS BEFORE CONTRIBUTING][1].
 
-## Getting Setup
+## Running Locally
 Do this first:
 
 > gem install jekyll
 
 > git clone -b gh-pages https://github.com/dudash/openshift-workshops.git
 
-### How to Test Local on a Mac
+### How to Run on a Mac
 > jekyll serve --baseurl ''
 
 > open http://127.0.0.1:4000/
 
-### How to Test Local on Linux
+### How to Run on Linux
 > jekyll serve --baseurl ''
 
 In your preferred webbrowser open http://127.0.0.1:4000/
@@ -24,8 +24,7 @@ In your preferred webbrowser open http://127.0.0.1:4000/
 ## Releasing
 ### Choose your set of labs
 First update the index.html to point to the correct directory for the labs you want
-Second update the _config.yml to set the workshop-dir to that directory as well
-In the future I'd like to set these as environment variables somehow that can be passed in on startup
+Second update the _config.yml to set dynamic variables <- (workshop-dir is OBE due to side-by-side labs and will be cleaned up / removed soon).
 
 ### How to Release on the Internet
 For now this is simply: commit your local changes to this branch and 'git push' to github.  In the future when we move away from GitHub pages, this will be slightly more complex.
@@ -35,7 +34,9 @@ The steps are:
 * Buid the site with 'jekyll build'
 * Copy the generated _site folder onto your USB media
 * Make a desktop shortcut on the USB OS Desktop to the location where you copied the _site folder
+* FYI - Running as a static only (generated) site will break dynamic variables - NEEDS TESTING
 
+<<<<<<< HEAD
 
 ## Development Caveats
 ### Plugin Support
@@ -52,3 +53,6 @@ The _data/code-config.yml file should be setup to select the proper github code 
 [1]: http://jekyllrb.com/
 [2]: https://jekyllrb.com/docs/plugins/
 [3]: https://jekyllrb.com/docs/structure/
+=======
+[1]: https://github.com/dudash/openshift-workshops/blob/master/CONTRIBUTING.md
+>>>>>>> upstream/gh-pages
