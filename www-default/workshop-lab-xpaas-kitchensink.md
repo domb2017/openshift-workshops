@@ -77,7 +77,7 @@ categories: [lab, ops]
 
 ### Let's Delete the Project
 
-<i class="fa fa-warning"></i> **Please follow these directions to delete your project so we can free up resources for the next lab."**
+<i class="fa fa-warning"></i> **Please follow these directions to delete your project so we can free up resources for the next lab.**
 
 >Find your jboss-xpaas project and click the trash can icon
 
