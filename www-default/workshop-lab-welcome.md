@@ -68,10 +68,12 @@ $ oc new-project demo
 $ oc project [NAME]
 {% endhighlight %}
 
-> <i class="fa fa-terminal"></i> Type the following command to show services, deployment configs, build configurations, and active deployments:
+To see the full list of commands supported, run `oc help`.
+
+> <i class="fa fa-terminal"></i> Type the following command to read more information about services, deployment configs, build configurations, and active deployments:
 
 {% highlight csh %}
-$ oc status
+$ oc status -h
 {% endhighlight %}
 
 ## Summary
