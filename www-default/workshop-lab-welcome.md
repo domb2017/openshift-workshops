@@ -33,12 +33,26 @@ OpenShift provides a web console that allow you to perform various tasks via a w
 <img alt="OpenShift Console Login" src="{{ site.baseurl }}/www-default/screenshots/ose-login.png" width="600"/><br/>
 *Login Webpage*
 
-Once logged in you should see your available projects - which, for this workshop, is just one project.
+Once logged in you should see your available projects.
+
+An OpenShift project allows a community of users (or a user) to organize and manage their content in isolation from other communities. Each project has its own resources, policies (who can or cannot perform actions), and constraints (quotas and limits on resources, etc). Projects act as a "wrapper" around all the application services and endpoints you (or your teams) are using for your work.
+
+Users must be given access to projects by administrators, or if allowed to create projects, automatically have access to their own projects.
+
+Projects can have a separate **name**, **displayName**, and **description**.
+
+- The mandatory **name** is a unique identifier for the project and is most visible when using the CLI tools or API.
+- The optional **displayName** is how the project is displayed in the web console (defaults to name).
+- The optional **description** can be a more detailed description of the project and is also visible in the web console.
+
+:thought_balloon: A project is technically a Kubernetes namespace with additional annotations.
 
 ### So this is what an empty project looks like
 > Click on one of the projects from the project list
 
 Don't worry, it's supposed to look empty right now because you currently don't have anything in your project.  We'll fix that in the next lab.
+
+:information_source: If you do not see an available project, go ahead and click `New Project` and create one.
 
 ### Let's try the command line
 > <i class="fa fa-terminal"></i> Open a terminal and login using the same URI/user/password with following command:
@@ -67,6 +81,8 @@ $ oc new-project demo
 {% highlight csh %}
 $ oc project [NAME]
 {% endhighlight %}
+
+## Help about any command
 
 To see the full list of commands supported, run `oc help`.
 

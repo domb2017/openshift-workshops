@@ -6,43 +6,6 @@ html_title: Hexboard
 categories: [lab, ops, app, demo, test]
 ---
 
-## Using a project
-
-An OpenShift project allows a community of users (or a user) to organize and manage their content in isolation from other communities. Each project has its own resources, policies (who can or cannot perform actions), and constraints (quotas and limits on resources, etc). Projects act as a "wrapper" around all the application services and endpoints you (or your teams) are using for your work.
-
-Users must be given access to projects by administrators, or if allowed to create projects, automatically have access to their own projects.
-
-Projects can have a separate **name**, **displayName**, and **description**.
-
-- The mandatory **name** is a unique identifier for the project and is most visible when using the CLI tools or API.
-- The optional **displayName** is how the project is displayed in the web console (defaults to name).
-- The optional **description** can be a more detailed description of the project and is also visible in the web console.
-
-:thought_balloon: A project is technically a Kubernetes namespace with additional annotations.
-
-
-###  Let's create the Hexboard project
-
-{% highlight csh %}
-$ oc new-project hexboard \
-     --display-name="Hexboard" \
-     --description="Red Hat Summit 2015 Middleware keynote demo project."
-{% endhighlight %}
-
-This creates a new project, with the currently logged-in user as the project admin. Option --display-name specifies the user-facing name of the project. Option --description specifies its description.
-
-:information_source: Note that we use double-quotes around the option arguments.
-
-###  Displaying the current project
-
-Check that you are currently using the "hexboard" project before proceeding.
-
-{% highlight csh %}
-$ oc project
-{% endhighlight %}
-
-The expected output is, Using project "hexboard" on server "[URI]".
-
 ###  Creating the Hexboard application
 
 The following creates a new application in OpenShift with the specified source code, templates, and images.
@@ -109,11 +72,15 @@ Click on the <b>Hexboard</b> project to navigate to the the project overview pag
 
 Mouseover <b>Browse</b> tab on the left hand :point_left: side of the screen, and explore the different menus.<br/><br/>
 
-:thought_balloon: If you'd like to view the deployed application... First click the :arrow_up: (up arrow) next to the circular image with "1 pod" displayed under the <b>sketchpod</b> service, then navigate to link above the deployed Hexboard pod i.e. `http://hexboard-hexboard.projectname-URI.com/`.<br/><br/>
-
-Do this a couple more times while tabbing back and forth see what happens. But, please don't do this too many times in the lab environment (I'll explain, just ask).
-
       </div>
     </div>
   </div>
 </div>
+
+## Summary
+
+If you'd like to view the deployed application... First click the up arrow next to the circular image with "1 pod" displayed under the deployed "sketchpod" `service`. Then navigate to link above the deployed pod i.e. "http://hexboard-hexboard.projectname-URI.com/", which is also known as a `route`.
+
+:information_source: You'll learn more about routes and services in the subsequent labs, so don't worry about this as much for the time being.
+
+Do this a couple more times while tabbing back and forth see what happens. But, please don't do this too many times in the lab environment (I'll explain, just ask).
