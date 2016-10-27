@@ -31,6 +31,8 @@ html_title: Workshops
 
 ### [Lab: xPaaS (JBoss EAP)](workshop-lab-jboss.html)
 
+### [Lab: xPaaS (JBoss EAP) - kitchen sink](workshop-lab-xpaas-kitchensink.html)
+
 ### [Lab: Adding a Database](workshop-lab-databases.html)
 
 ### [Lab: Application Templates](workshop-lab-templates.html)
