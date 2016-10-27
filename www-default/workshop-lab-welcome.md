@@ -77,4 +77,4 @@ $ oc status -h
 {% endhighlight %}
 
 ## Summary
-You should now be ready to get hands-on with our workshop labs
+You should now be ready to get hands-on with our workshop labs.
