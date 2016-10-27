@@ -62,6 +62,12 @@ $ oc new-project demo
 
 :information_source: You may recieve the message "Error from server: project "demo" already exists". Try another project name i.e. your first initial and lastname.
 
+> <i class="fa fa-terminal"></i> If you create more than one project, then you can switch projects with the following command:
+
+{% highlight csh %}
+$ oc project [NAME]
+{% endhighlight %}
+
 > <i class="fa fa-terminal"></i> Type the following command to show services, deployment configs, build configurations, and active deployments:
 
 {% highlight csh %}
