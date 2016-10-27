@@ -60,7 +60,7 @@ $ oc get projects
 $ oc new-project demo
 {% endhighlight %}
 
-:information_source: You may recieve the message "Error from server: project "demo" already exists". Try another project name i.e. the first initial and lastname.
+:information_source: You may recieve the message "Error from server: project "demo" already exists". Try another project name i.e. your first initial and lastname.
 
 > <i class="fa fa-terminal"></i> Type the following command to show services, deployment configs, build configurations, and active deployments:
 
