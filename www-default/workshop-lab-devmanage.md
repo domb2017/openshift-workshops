@@ -12,7 +12,7 @@ In this lab we will explore some of the common activities undertaken by develope
 ### Setup
 From the previous lab you should have the DC Metro Maps web app running in Open Shift.
 
-<i class="fa fa-warning"></i> **Only if you don't already have it running already, add it with the following steps.**
+:warning: **Only if you don't already have it running already, add it with the following steps.**
 
 > <i class="fa fa-terminal"></i> Goto the terminal and type these commands:
 
