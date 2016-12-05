@@ -15,35 +15,40 @@ A/B testing is **NOT** blue-green deployments. A/B testing is a way of testing f
 The difference between blue-green deployments and A/B testing is A/B testing is for measuring functionality in the app. Blue-green deployments is about releasing new software safely and rolling back predictably. You can obviously combine them: use blue-green deployments to deploy new features in an app that can be used for A/B testing.
 
 ### Let's Try It!
-This demo will show how to use OpenShift's built in HAProxy capabilities to load balance across two NodeJs Express Pods.
+This demo will show how to use OpenShift's built in HAProxy capabilities to load balance across two Node.js apps.
 
-1. Create basic node.js web app w/ git repo from a previous commit
-   ```
-   oc new-project balanced
-   oc new-app https://github.com/kyle-benson/ocp-nodejs-demo.git#b69a1b0f0c3195baa0dbd2ff600f8bebc38c7ade --name='app1'
-   ```
+Create basic node.js web app w/ git repo from a previous commit.
+
+    oc new-project balanced
+    oc new-app https://github.com/kyle-benson/ocp-nodejs-demo.git#b69a1b0f0c3195baa0dbd2ff600f8bebc38c7ade --name='app1'
+
+
   :warning: Do not create a route automatically for this exercise.
 
-2. Create route for initial pod
-    ```
+Create a route to the deployed application.
+
     oc expose svc/app1 --name="appab" --hostname=appab-balanced.master.kbenson.co
-    ```
 
-3.	Start testing route via curl
-    ```
+Begin using `curl` against the newly exposed route.
+
+
     while true; do curl appab-balanced.master.kbenson.co && echo && sleep 5; done
-    ```
 
-4. Annotate route
-	  ```
+:information_source: Keep this command alive (it'll be used later on in this lab).
+
+Update the current Route's annotation.
+
     oc get routes
     oc annotate route/appab haproxy.router.openshift.io/balance=roundrobin
-    ```
 
-5. Create second nodejs pod from new branch or updated commit
-    ```
+Create second nodejs app from new branch or updated commit.
+
     oc new-app https://github.com/kyle-benson/ocp-nodejs-demo.git --name="app2"
-    ```
-7. Setup route to load balance between appA & appB
-	 Routes > Edit > Split Traffic
+
+Setup route to load balance between `appA` & `appB`.
+
+> **Routes** > **Edit** > **Split Traffic**.
+
   ![ocp route gif](screenshots/ocp_AB_routes.gif "Enabling an AB route in the UI")
+
+Observe the previous started while loop, notice anything different?
