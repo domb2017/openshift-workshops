@@ -1,6 +1,6 @@
 ---
 layout: lab
-title: AB Testing
+title: A/B Testing
 subtitle: Using HAProxy to AB Test
 html_title: AB Test
 categories: [lab, labels, selectors, annotations, ops]
