@@ -6,15 +6,23 @@ html_title: AB Test
 categories: [lab, labels, selectors, annotations, ops]
 ---
 
-# ocp-nodejs-demo
-This demo will show how to use OpenShift's built in HAProxy capabilities to load balance across two NodeJs Express Pods
+### What's A/B Testing?
+
+A/B testing is **NOT** blue-green deployments. A/B testing is a way of testing features in your application for various reasons like usability, popularity, noticeability, etc, and how those factors influence the bottom line. It’s usually associated with UI parts of the app, but of course the backend services need to be available to do this. You can implement this with application-level switches (ie, smart logic that knows when to display certain UI controls), static switches (in the application), and also using Canary releases (as discussed below).
+
+<img alt="A/B Testing" src="{{ site.baseurl }}/www-default/screenshots/ab-testing.png" width="600"/><br/>
+
+The difference between blue-green deployments and A/B testing is A/B testing is for measuring functionality in the app. Blue-green deployments is about releasing new software safely and rolling back predictably. You can obviously combine them: use blue-green deployments to deploy new features in an app that can be used for A/B testing.
+
+### Let's Try It!
+This demo will show how to use OpenShift's built in HAProxy capabilities to load balance across two NodeJs Express Pods.
 
 1. Create basic node.js web app w/ git repo from a previous commit
    ```
    oc new-project balanced
    oc new-app https://github.com/kyle-benson/ocp-nodejs-demo.git#b69a1b0f0c3195baa0dbd2ff600f8bebc38c7ade --name='app1'
    ```
-  **NOTE! Do not create a route automatically for this exercise**
+  :warning: Do not create a route automatically for this exercise.
 
 2. Create route for initial pod
     ```
