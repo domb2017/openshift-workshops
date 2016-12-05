@@ -11,7 +11,7 @@ html_title: Workshops
 
 ### [Lab: Login and a Tour of OpenShift Enterprise](workshop-lab-welcome.html)
 
-### [Lab: Smoke Test (Hexboard)](workshop-lab-hexboard.html)
+<!-- ### [Lab: Smoke Test (Hexboard)](workshop-lab-hexboard.html) -->
 
 ### [Lab: BYO Docker](workshop-lab-byodocker.html)
 
