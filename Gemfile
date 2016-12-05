@@ -2,8 +2,6 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
-# gem 'rack'
-# gem 'puma'
 gem 'jekyll'
 gem 'html-proofer'
 gem 'jemoji'

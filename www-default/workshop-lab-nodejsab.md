@@ -22,8 +22,7 @@ Create basic node.js web app w/ git repo from a previous commit.
     oc new-project balanced
     oc new-app https://github.com/kyle-benson/ocp-nodejs-demo.git#b69a1b0f0c3195baa0dbd2ff600f8bebc38c7ade --name='app1'
 
-
-  :warning: Do not create a route automatically for this exercise.
+:warning: Do not create a route automatically for this exercise.
 
 Create a route to the deployed application.
 
