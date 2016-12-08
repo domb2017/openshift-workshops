@@ -44,9 +44,9 @@ To begin, we will create a new project. Name the new project "cicd".
       <div class="panel-body">
 
         <blockquote>Browse to original landing page, and click "New Project".</blockquote>
-        <p><img src="{{ site.baseurl }}/www/3.3/default/screenshots/ose-lab-cicd-new-project.png" width="100"/></p>
+        <p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-new-project.png" width="100"/></p>
         <blockquote>Fill in the name of the project as "cicd" and click "Create"</blockquote>
-        <p><img src="{{ site.baseurl }}/www/3.3/default/screenshots/ose-lab-cicd-new-project-detail.png" width="500"/></p>
+        <p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-new-project-detail.png" width="500"/></p>
       </div>
     </div>
   </div>
@@ -96,12 +96,12 @@ First we will start by installing Jenkins to run in a pod within your workshop p
       <div class="panel-body">
 
         <blockquote>Click "Add to Project", click "Browse Catalog" select "jenkins-ephemeral".</blockquote>
-        <p><img src="{{ site.baseurl }}/www/3.1/default/screenshots/ose-lab-cicd-jenkins-ephemeral.png" width="500"/></p>
+        <p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-jenkins-ephemeral.png" width="500"/></p>
         <blockquote>Click "continue to overview", wait for it to start</blockquote>
-        <p><img src="{{ site.baseurl }}/www/3.3/default/screenshots/ose-lab-cicd-jenkins-start.png" width="500"/></p>
+        <p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-jenkins-start.png" width="500"/></p>
 
         <blockquote>Click the service link to open jenkins, login as admin/password</blockquote>
-        <p><img src="{{ site.baseurl }}/www/3.1/default/screenshots/ose-lab-cicd-jenkins-login.png" width="500"/></p>
+        <p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-jenkins-login.png" width="500"/></p>
       </div>
     </div>
   </div>
@@ -121,13 +121,13 @@ Now let's make sure we have the OpenShift Pipeline [plugin][2] properly installe
     <div id="collapseBOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingBOne">
       <div class="panel-body">
   <blockquote>Click "Manage Jenkins"</blockquote>
-  <p><img src="{{ site.baseurl }}/www/3.1/default/screenshots/ose-lab-cicd-manage-jenkins.png" width="100" height="100"/></p>
+  <p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-manage-jenkins.png" width="100" height="100"/></p>
 
   <blockquote>Click on "Manage Plugins"</blockquote>
-  <p><img src="{{ site.baseurl }}/www/3.1/default/screenshots/ose-lab-cicd-manage-plugins.png" width="500" /></p>
+  <p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-manage-plugins.png" width="500" /></p>
 
   <blockquote>Click on "Available" tab, and filter on "openshift". Find the"Openshift Pipeline Jenkins Plugin". If it is not installed, then install it.</blockquote>
-  <p><img src="{{ site.baseurl }}/www/3.1/default/screenshots/ose-lab-cicd-jenkins-plugin.png" width="700" /></p>
+  <p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-jenkins-plugin.png" width="700" /></p>
       </div>
     </div>
   </div>
@@ -141,7 +141,7 @@ You can read more about the plugin [here][3].
 In this example pipeline we will be building, tagging, staging and scaling a Node.js webapp.  We wrote all the code for you already, so don't worry you won't be coding in this lab.  You will just use the code and unit tests to see how CI/CD pipelines work.  And keep in mind that these principles are relevant whether your programming in Node.js, Ruby on Rails, Java, PHP or any one of today's popular programming languages.
 
 <blockquote>Fork the project into your own GitHub account</blockquote>
-<p><img src="{{ site.baseurl }}/www/3.1/default/screenshots/ose-lab-cicd-fork.png" width="700" /></p>
+<p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-fork.png" width="700" /></p>
 
 <blockquote>Create a dev deployment based on the forked repo
 </blockquote>
@@ -177,14 +177,14 @@ $ oc expose svc/test
     <div id="collapseCOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingCOne">
       <div class="panel-body">
 <blockquote>click "New Item"</blockquote>
-<p><img src="{{ site.baseurl }}/www/3.1/default/screenshots/ose-lab-cicd-new-item.png" width="500" /></p>
+<p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-new-item.png" width="500" /></p>
 <blockquote>call it yourname-ci-devel, select freestyle, click OK</blockquote>
-<p><img src="{{ site.baseurl }}/www/3.1/default/screenshots/ose-lab-cicd-name-job.png" width="500" /></p>
+<p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-name-job.png" width="500" /></p>
 <blockquote>Click add build step and choose "Tag OpenShift Image". Enter in all the info, tag as "readyToTest"</blockquote>
-<p><img src="{{ site.baseurl }}/www/3.3/default/screenshots/ose-lab-cicd-new-tag.png" width="700" /></p>
+<p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-new-tag.png" width="700" /></p>
 
 <blockquote>In the "Post-build actions" subsection click "Add post-build action" and select "Build other projects". Type in "yourname-ci-deploytotest"</blockquote>
-<p><img src="{{ site.baseurl }}/www/3.1/default/screenshots/ose-lab-cicd-build-other-project.png" width="500" /></p>
+<p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-build-other-project.png" width="500" /></p>
 <blockquote>Click "Save", don't worry about the error here, we are about to build that Jenkins job.</blockquote>
 
 <p>
@@ -212,19 +212,19 @@ to get this to work
 <blockquote>Click "Back to dashboard"</blockquote>
 <blockquote>Click "New Item"</blockquote>
 <blockquote>Call it "yourname-ci-deploytotest", select "freestyle", click "OK"</blockquote>
-<p><img src="{{ site.baseurl }}/www/3.1/default/screenshots/ose-lab-cicd-deploy-to-test.png" width="500" /></p>
+<p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-deploy-to-test.png" width="500" /></p>
 <blockquote>Click add build step and choose "Execute shell"</blockquote>
-<p><img src="{{ site.baseurl }}/www/3.1/default/screenshots/ose-lab-cicd-add-exec.png" width="200" /></p>
+<p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-add-exec.png" width="200" /></p>
 Additional steps could go here. For now let's just add some bash to the text area:
 {% highlight csh %}
 echo "inside my jenkins job"
 {% endhighlight%}
 <blockquote>Click add build step and choose "Trigger OpenShift Deployment".</blockquote>
-<p><img src="{{ site.baseurl }}/www/3.3/default/screenshots/ose-lab-cicd-trigger-deployment.png" width="700" /></p>
+<p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-trigger-deployment.png" width="700" /></p>
 <blockquote>Click add build step and choose "Scale OpenShift Deployment".</blockquote>
-<p><img src="{{ site.baseurl }}/www/3.3/default/screenshots/ose-lab-cicd-scale-deployment.png" width="700" /></p>
+<p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-scale-deployment.png" width="700" /></p>
 <blockquote>Click "Save".</blockquote>
-<p><img src="{{ site.baseurl }}/www/3.3/default/screenshots/ose-lab-cicd-save.png" width="200" /></p>
+<p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-save.png" width="200" /></p>
       </div>
     </div>
   </div>
@@ -234,7 +234,7 @@ echo "inside my jenkins job"
 
 At this point you should see the following scenario play out:
 
-  * Inside of Jenkins, you will click the dev pipline that was created we created. On the left-hand side you will see an option to <img src="{{ site.baseurl }}/www/3.3/default/screenshots/ose-lab-cicd-build-now.png" width="100" />. When you click this, the first job will begin to run.
+  * Inside of Jenkins, you will click the dev pipline that was created we created. On the left-hand side you will see an option to <img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-build-now.png" width="100" />. When you click this, the first job will begin to run.
 
   * This first job will use the OpenShift Pipeline plugin to create a new tag of the image called "readyToTest".
 
@@ -242,7 +242,7 @@ At this point you should see the following scenario play out:
 
   * You can see the history of this new tag by browsing to initiate two jobs in the pipeline with the final step being the new tag of "readyToTest". The new tag can then be used for automatic or manual builds of the new test application. You can view the status of the new tag in OpenShift by browsing to Builds -> Images -> your image stream
 
-  <p><img src="{{ site.baseurl }}/www/3.3/default/screenshots/ose-lab-cicd-image-stream-view.png" width="700" /></p>
+  <p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-image-stream-view.png" width="700" /></p>
 
 
 ## Summary
