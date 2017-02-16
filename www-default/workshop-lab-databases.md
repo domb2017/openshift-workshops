@@ -50,8 +50,6 @@ displayed:
 
 <img alt="OpenShift MongoDB Template" src="{{ site.baseurl }}/images/mongodb-template.png" width="600"/>
 
-<!-- ![MongoDB](http://training.runcloudrun.com/images/roadshow/mongodb-template.png) -->
-
 You can see that some of the fields say *"generated if empty"*. This is a
 feature of *Templates* in OpenShift that will be covered in the next lab. For
 now, let's use the following values:
