@@ -109,6 +109,7 @@ First we will start by installing Jenkins to run in a pod within your workshop p
 
 ### The OpenShift pipeline plugin
 Now let's make sure we have the OpenShift Pipeline [plugin][2] properly installed within Jenkins.  It will be used to define our application lifecycle and to let our Jenkins jobs perform commands on our OpenShift cluster. It is possible that the plugin is already installed in your environment, so use these steps to verify if it is installed and install it if is not.
+
 <div class="panel-group" id="accordionB" role="tablist" aria-multiselectable="true">
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingBOne">
@@ -116,26 +117,24 @@ Now let's make sure we have the OpenShift Pipeline [plugin][2] properly installe
         <a role="button" data-toggle="collapse" data-parent="#accordionB" href="#collapseBOne" aria-expanded="true" aria-controls="collapseBOne">
           Install OSE Plugin Steps
         </a>
-      </div
+      </div>
     </div>
     <div id="collapseBOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingBOne">
       <div class="panel-body">
-  <blockquote>Click "Manage Jenkins"</blockquote>
-  <p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-manage-jenkins.png" width="100" height="100"/></p>
+        <blockquote>Click "Manage Jenkins"</blockquote>
+        <p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-manage-jenkins.png" width="100" height="100"/></p>
 
-  <blockquote>Click on "Manage Plugins"</blockquote>
-  <p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-manage-plugins.png" width="500" /></p>
+        <blockquote>Click on "Manage Plugins"</blockquote>
+        <p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-manage-plugins.png" width="500" /></p>
 
-  <blockquote>Click on "Available" tab, and filter on "openshift". Find the"Openshift Pipeline Jenkins Plugin". If it is not installed, then install it.</blockquote>
-  <p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-jenkins-plugin.png" width="700" /></p>
+        <blockquote>Click on "Available" tab, and filter on "openshift". Find the"Openshift Pipeline Jenkins Plugin". If it is not installed, then install it.</blockquote>
+        <p><img src="{{ site.baseurl }}/www-default/screenshots/ose-lab-cicd-jenkins-plugin.png" width="700" /></p>
       </div>
     </div>
   </div>
 </div>
 
-
 You can read more about the plugin [here][3].
-
 
 ### Our deployments
 In this example pipeline we will be building, tagging, staging and scaling a Node.js webapp.  We wrote all the code for you already, so don't worry you won't be coding in this lab.  You will just use the code and unit tests to see how CI/CD pipelines work.  And keep in mind that these principles are relevant whether your programming in Node.js, Ruby on Rails, Java, PHP or any one of today's popular programming languages.
