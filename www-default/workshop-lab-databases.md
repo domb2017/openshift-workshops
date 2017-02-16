@@ -48,7 +48,9 @@ Your view on the next page is slightly different than before. Since this
 template requires several environment variables, they are predominantly
 displayed:
 
-![MongoDB](http://training.runcloudrun.com/images/roadshow/mongodb-template.png)
+<img alt="OpenShift MongoDB Template" src="{{ site.baseurl }}/images/mongodb-template.png" width="600"/>
+
+<!-- ![MongoDB](http://training.runcloudrun.com/images/roadshow/mongodb-template.png) -->
 
 You can see that some of the fields say *"generated if empty"*. This is a
 feature of *Templates* in OpenShift that will be covered in the next lab. For
