@@ -25,11 +25,11 @@ html_title: Workshops
 
 ### [Lab: Labels](workshop-lab-labels.html)
 
-### [Lab: CI | CD Pipelines (Preview)](workshop-lab-cicd.html)
+### [Lab: CI | CD Pipelines](workshop-lab-cicd.html)
+
+<!-- ### [Lab: Pipeline Deployment with Jenkins (Preview)](workshop-lab-pipeline-jenkins.html) -->
 
 ### [Lab: Blue-green Deployment](workshop-lab-bluegreen.html)
-
-<!-- ### [Lab: Pipeline Deployment with Jenkins](workshop-lab-pipeline-jenkins.html) -->
 
 ### [Lab: xPaaS (JBoss EAP) - Kitchen Sink](workshop-lab-xpaas-kitchensink.html)
 
