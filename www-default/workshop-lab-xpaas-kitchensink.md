@@ -1,8 +1,8 @@
 ---
 layout: lab
-title: xPaaS (Jboss EAP) - Kitchen Sink
+title: xPaaS (JBoss EAP) - Kitchen Sink
 subtitle:
-html_title: xPaaS (Jboss EAP) - Kitchen Sink
+html_title: xPaaS (JBoss EAP) - Kitchen Sink
 categories: [lab, ops]
 ---
 
