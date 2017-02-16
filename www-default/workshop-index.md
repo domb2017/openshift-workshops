@@ -31,9 +31,9 @@ html_title: Workshops
 
 <!-- ### [Lab: Pipeline Deployment with Jenkins](workshop-lab-pipeline-jenkins.html) -->
 
-### [Lab: xPaaS (JBoss EAP)](workshop-lab-jboss.html)
+### [Lab: xPaaS (JBoss EAP) - Kitchen Sink](workshop-lab-xpaas-kitchensink.html)
 
-### [Lab: xPaaS (JBoss EAP) - kitchen sink](workshop-lab-xpaas-kitchensink.html)
+### [Lab: xPaaS (JBoss EAP)](workshop-lab-jboss.html)
 
 ### [Lab: Adding a Database](workshop-lab-databases.html)
 
