@@ -194,7 +194,6 @@ to get this to work
     </div>
   </div>
 </div>
-</div>
 
 #### Connecting the pipeline for dev->test
 <div class="panel-group" id="accordionD" role="tablist" aria-multiselectable="true">
