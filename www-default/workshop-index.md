@@ -27,7 +27,7 @@ html_title: Workshops
 
 ### [Lab: CI | CD Pipelines](workshop-lab-cicd.html)
 
-<!-- ### [Lab: Pipeline Deployment with Jenkins (Preview)](workshop-lab-pipeline-jenkins.html) -->
+<!-- ### [Lab: Pipeline Deployment with Jenkins](workshop-lab-pipeline-jenkins.html) -->
 
 ### [Lab: Blue-green Deployment](workshop-lab-bluegreen.html)
 
