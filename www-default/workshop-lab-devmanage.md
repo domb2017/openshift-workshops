@@ -19,8 +19,8 @@ From the previous lab you should have the DC Metro Maps web app running in Open 
 > <i class="fa fa-terminal"></i> Goto the terminal and type these commands:
 
 {% highlight csh %}
-$ oc new-app --name=dc-metro-map https://github.com/dudash/openshift-workshops.git --context-dir=dc-metro-map
-$ oc expose service dc-metro-map
+oc new-app --name=dc-metro-map https://github.com/dudash/openshift-workshops.git --context-dir=dc-metro-map
+oc expose service dc-metro-map
 {% endhighlight %}
 
 
@@ -43,7 +43,7 @@ There is no more ambiguity or confusion about where the app came from.  Open Shi
 <i class="fa fa-terminal"></i> Goto the terminal and type the following:
 </blockquote>
 {% highlight csh %}
-$ oc status
+oc status
 {% endhighlight %}
 
 This is going to show the status of your current project.  In this case it will show the dc-metro-map service (svc) with a nested deployment config (dc) along with some more info that you can ignore for now.
@@ -56,7 +56,7 @@ The dc provides us details we care about to see where our application image come
 <i class="fa fa-terminal"></i> Type the following to find out more about our dc:
 </blockquote>
 {% highlight csh %}
-$ oc describe dc/dc-metro-map
+oc describe dc/dc-metro-map
 {% endhighlight %}
 
 Notice under the template section it lists the containers it wants to deploy along with the path to the container image.
@@ -69,7 +69,7 @@ Because we built this app using S2I, we get to see the details about the build -
 <i class="fa fa-terminal"></i> Type the following to find out more about our bc:
 </blockquote>
 {% highlight csh %}
-$ oc describe bc/dc-metro-map
+oc describe bc/dc-metro-map
 {% endhighlight %}
 
 Notice the information about the configuration of how this app gets built.  In particular look at the github URL, the webhooks you can use to automatically trigger a new build, the docker image where the build runs inside of, and the builds that have been completed.  New let's look at one of those builds.
@@ -78,7 +78,7 @@ Notice the information about the configuration of how this app gets built.  In p
 <i class="fa fa-terminal"></i> Type the following:
 </blockquote>
 {% highlight csh %}
-$ oc describe build/dc-metro-map-1
+oc describe build/dc-metro-map-1
 {% endhighlight %}
 
 This shows us even more about the deployed container's build and source code including exact commit GUID for this build.  We can also can see the commit's author, and the commit message.  You can inspect the code by opening a web browser and pointing it to: https://github.com/dudash/openshift-workshops/commit/[COMMIT_GUID]
@@ -152,7 +152,7 @@ In the S2I lab we looked at a build log to inspect the process of turning source
 <i class="fa fa-terminal"></i> Goto the terminal and type the following:
 </blockquote>
 {% highlight csh %}
-$ oc get pods
+oc get pods
 {% endhighlight %}
 
 This is going to show basic details for all pods in this project (including the builders).  Let's look at the log for the pod running our application.  Look for the POD NAME that that is "Running" you will use it below.
@@ -161,7 +161,7 @@ This is going to show basic details for all pods in this project (including the 
 <i class="fa fa-terminal"></i> Goto the terminal and type the following (replacing the POD ID with your pod's ID):
 </blockquote>
 {% highlight csh %}
-$ oc logs [POD NAME]
+oc logs [POD NAME]
 {% endhighlight %}
 
 You will see in the output details of your app starting up and any status messages it has reported since it started.
@@ -227,11 +227,11 @@ Let's have a little fun.  The app has some easter eggs that get triggered when c
 <i class="fa fa-terminal"></i> Goto the terminal and type the following:
 </blockquote>
 {% highlight csh %}
-$ oc env dc/dc-metro-map -e BEERME=true
+oc env dc/dc-metro-map -e BEERME=true
 {% endhighlight %}
 
 {% highlight csh %}
-$ oc get pods -w
+oc get pods -w
 {% endhighlight %}
 
 Due to the deployment config strategy being set to "Rolling" and the "ConfigChange" trigger being set, Open Shift auto deployed a new pod as soon as you updated with the env variable.  If you were quick enough you saw this happening with the get pods command
@@ -314,25 +314,25 @@ There are situations when you might want to jump into a running pod, and Open Sh
 <i class="fa fa-terminal"></i> Goto the terminal and type the following:
 </blockquote>
 {% highlight csh %}
-$ oc get pods
+oc get pods
 {% endhighlight %}
 
 Find the pod name for your Running pod
 
 {% highlight csh %}
-$ oc exec -it [POD NAME] /bin/bash
+oc exec -it [POD NAME] /bin/bash
 {% endhighlight %}
 
 You are now interactively attached to the container in your pod.  Let's look for the environment variables we set:
 
 {% highlight csh %}
-$ env | grep BEER
+env | grep BEER
 {% endhighlight %}
 
 That should return the **BEERME=true** matching the value that we set in the deployment config.
 
 {% highlight csh %}
-$ exit
+exit
 {% endhighlight %}
 
       </div>
@@ -378,7 +378,7 @@ That should return the **BEERME=true** matching the value that we set in the dep
 > <i class="fa fa-terminal"></i> Let's clean up all this to get ready for the next lab:
 
 {% highlight csh %}
-$ oc delete all -l app=dc-metro-map
+oc delete all -l app=dc-metro-map
 {% endhighlight %}
 
 ## Summary

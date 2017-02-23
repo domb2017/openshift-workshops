@@ -53,13 +53,13 @@ file using file explorer and select to extract the contents.
 Open up a terminal window and change to the directory where you downloaded the
 file.  Once you are in the directory, enter in the following command:
 
-	$ tar zxvf oc-macosx.tar.gz
+	tar zxvf oc-macosx.tar.gz
 
 **Linux:**
 Open up a terminal window and change to the directory where you downloaded the
 file.  Once you are in the directory, enter in the following command:
 
-	$ tar zxvf oc-linux.tar.gz
+	tar zxvf oc-linux.tar.gz
 
 ####**Adding *oc* to your PATH**
 
@@ -85,18 +85,18 @@ Windows 10 - Follow the directions above.
 
 **OS X:**
 
-	$ export PATH=$PATH:~/OpenShift
+	export PATH=$PATH:~/OpenShift
 
 **Linux:**
 	
-	$ export PATH=$PATH:~/OpenShift
+	export PATH=$PATH:~/OpenShift
 
 
 ####**Verify**
 At this point, we should have the oc tool available for use.  Let's test this
 out by printing the version of the oc command:
 
-	$ oc version
+	oc version
 
 You should see the following (or something similar):
 

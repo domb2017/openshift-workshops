@@ -11,7 +11,7 @@ categories: [lab, ops, app, demo, test]
 The following creates a new application in OpenShift with the specified source code, templates, and images.
 
 {% highlight csh %}
-$ oc new-app -f https://raw.githubusercontent.com/2015-Middleware-Keynote/hexboard/master/app_template.json \
+oc new-app -f https://raw.githubusercontent.com/2015-Middleware-Keynote/hexboard/master/app_template.json \
              -p ACCESS_TOKEN=$(oc whoami -t)
 {% endhighlight %}
 
@@ -41,7 +41,7 @@ The images will be deployed via a deployment configuration, and a service will b
 <i class="fa fa-terminal"></i> Goto the terminal and type the following:
 </blockquote>
 {% highlight csh %}
-$ oc get builds -w
+oc get builds -w
 {% endhighlight %}
 
 This will tail the deployment process as a image is instantiated into a container.

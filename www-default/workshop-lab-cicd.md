@@ -29,7 +29,7 @@ To begin, we will create a new project. Name the new project "cicd".
         <i class="fa fa-terminal"></i> Goto the terminal and type the following:
         </blockquote>
         {% highlight csh %}
-        $ oc new project cicd
+        oc new project cicd
         {% endhighlight %}
       </div>
     </div>
@@ -73,15 +73,15 @@ First we will start by installing Jenkins to run in a pod within your workshop p
         <i class="fa fa-terminal"></i> Goto the terminal and type the following:
         </blockquote>
         {% highlight csh %}
-        $ oc new-app --template=jenkins-ephemeral -e JENKINS_PASSWORD=password
-        $ oc expose svc jenkins
-        $ oc policy add-role-to-user edit -z default
+        oc new-app --template=jenkins-ephemeral -e JENKINS_PASSWORD=password
+        oc expose svc jenkins
+        oc policy add-role-to-user edit -z default
         {% endhighlight %}
 
         <blockquote>Copy hostname and paste in browser's address bar...</blockquote>
 
         {% highlight csh %}
-        $ oc get routes | grep 'jenkins' | awk '{print $2}'
+        oc get routes | grep 'jenkins' | awk '{print $2}'
         {% endhighlight %}
       </div>
     </div>
@@ -149,9 +149,9 @@ In this example pipeline we will be building, tagging, staging and scaling a Nod
 <blockquote><i class="fa fa-terminal"></i> Goto the terminal and type the following:</blockquote>
 <p>
 {% highlight csh %}
-$ oc new-app https://github.com/YOUR_ACCOUNT/openshift-workshops.git \
+oc new-app https://github.com/YOUR_ACCOUNT/openshift-workshops.git \
    --name=dev --context-dir=dc-metro-map
-$ oc expose svc/dev
+oc expose svc/dev
 {% endhighlight %}</p>
 
 <blockquote>Create a test deployment based on a tag of the dev ImageStream
@@ -159,9 +159,9 @@ $ oc expose svc/dev
 <blockquote><i class="fa fa-terminal"></i> Goto the terminal and type the following:</blockquote>
 <p>
 {% highlight csh %}
-$ oc new-app dev:readyToTest --name=test --allow-missing-imagestream-tags
-$ oc expose dc/test --port 8080
-$ oc expose svc/test
+oc new-app dev:readyToTest --name=test --allow-missing-imagestream-tags
+oc expose dc/test --port 8080
+oc expose svc/test
 {% endhighlight %}</p>
 
 #### Setup Jekins jobs to use their openshift image stream (which is off your GitHub fork)

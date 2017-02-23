@@ -19,7 +19,7 @@ In order to set resource quotas, you need to create a *ResourceQuota* object in
 your project. Run the following to create a JSON file containing the *ResourceQuota*
 definition:
 
-		$ cat > /tmp/resource-quota.json <<EOF
+		cat > /tmp/resource-quota.json <<EOF
 		{
 		  "apiVersion": "v1",
 		  "kind": "ResourceQuota",
@@ -42,8 +42,8 @@ definition:
 The user needs to have admin privileges to create *ResourceQuota* in the project
 which is already given to your user. Run the following to create a *ResourceQuota*:
 
-    $ oc project userXX-mlbparks
-		$ oc process -f /tmp/resource-quota.json
+    oc project userXX-mlbparks
+		oc process -f /tmp/resource-quota.json
 
 **Note:** Make sure to replace your user number with *userXX* in the first command.
 
@@ -53,7 +53,7 @@ To limit the amount of resources a Pod or Container consumes, you need to create
 a *LimitRange* object in your project. Run the following to create a JSON file
 containing the *LimitRange* definition:
 
-		$ cat > /tmp/resource-limits.json <<EOF
+		cat > /tmp/resource-limits.json <<EOF
 		{
 			"kind": "LimitRange",
 			"apiVersion": "v1",
@@ -96,7 +96,7 @@ containing the *LimitRange* definition:
 
 Run the following to create a *LimitRange*:
 
-		$ oc process -f /tmp/resource-limits.json
+		oc process -f /tmp/resource-limits.json
 
 Go the OpenShift web console and click on the *Settings* tab on the left
 sidebar. You should be able to see the limits in the project and also the
@@ -113,7 +113,7 @@ allowed to create on and you one already created.
 Let's scale our application up and see what happens. Run the following to create
 more pods for the JBoss EAP application:
 
-	$ oc scale dc mlbparks --replicas=5
+	oc scale dc mlbparks --replicas=5
 
 OpenShift starts creating new pods and after a short while 4 pods will be created
 however the number of pods never reaches to 5.

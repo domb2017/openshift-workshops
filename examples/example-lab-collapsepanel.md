@@ -30,7 +30,7 @@ category: lab
       <div class="panel-body">
 <i class="fa fa-terminal"></i> Goto the terminal and type the following:
 {% highlight csh %}
-$ oc new-app blahblah
+oc new-app blahblah
 {% endhighlight %}
       </div>
     </div>

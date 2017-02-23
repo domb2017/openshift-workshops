@@ -21,11 +21,11 @@ Let's combine all of the exercises we have performed in the last three labs into
 
 In order for the magic to happen, first create a new project and add the template to the project:
 
-    $ oc new-project mlbparks-template
+    oc new-project mlbparks-template
 
 ![OC New Project MLB Parks Template]({{ site.url }}/images/2016/02/oc-new-project-mlbparks-template.png)
 
-    $ oc create -f https://raw.githubusercontent.com/gshipley/openshift3mlbparks/master/mlbparks-template.json
+    oc create -f https://raw.githubusercontent.com/gshipley/openshift3mlbparks/master/mlbparks-template.json
 
 ![OC Create MLB Parks Template]({{ site.url }}/images/2016/02/oc-create-mlbparks-template.png)
 
@@ -33,7 +33,7 @@ Now we have access to the application template in our project. As a side note, a
 
 :fireworks: Are you ready for the magic command? Here it is:
 
-    $ oc new-app mlbparks
+    oc new-app mlbparks
 
 ![OC New Application MLB Parks Template]({{ site.url }}/images/2016/02/oc-new-app-mlbparks-template.png )
 

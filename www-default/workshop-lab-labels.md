@@ -32,8 +32,8 @@ In a previous lab we added our web app using a S2I template.  When we did that, 
 <i class="fa fa-terminal"></i> Goto the terminal and try the following:
 </blockquote>
 {% highlight csh %}
-$ oc get pods
-$ oc describe pod/PODNAME | more
+oc get pods
+oc describe pod/PODNAME | more
 {% endhighlight %}
 
 You can see the Labels automatically added contain the app, deployment, and deploymentconfig.  Let's add a new label to this pod.
@@ -42,14 +42,14 @@ You can see the Labels automatically added contain the app, deployment, and depl
 <i class="fa fa-terminal"></i> Add a label
 </blockquote>
 {% highlight csh %}
-$ oc oc label pod/PODNAME testdate=4.30.2016 testedby=mylastname
+oc oc label pod/PODNAME testdate=4.30.2016 testedby=mylastname
 {% endhighlight %}
 
 <blockquote>
 <i class="fa fa-terminal"></i> Look at the labels
 </blockquote>
 {% highlight csh %}
-$ oc describe pod/PODNAME | more
+oc describe pod/PODNAME | more
 {% endhighlight %}
 
 

@@ -8,7 +8,7 @@ Enterprise 3.x environment that has been provided for this Roadshow session.  In
 order to login, we will use the `oc` command and then specify the server that we
 want to authenticate to.  Issue the following command:
 
-	$ oc login openshift.CITYNAME.openshift3roadshow.com:443
+	oc login openshift.CITYNAME.openshift3roadshow.com:443
     
 **Note:** Ensure that you replace *CITYNAME* with the correct hostname / city
 for your location.  This information was provided to you by the instructor of
@@ -34,7 +34,7 @@ corporate-standard CA that you already have installed on your system.
 server has an invalid x.509 certificate.  If you receive this error, enter in
 the following command:
 
-	$ oc login master.test.openshift3roadshow.com --insecure-skip-tls-verify=true
+	oc login master.test.openshift3roadshow.com --insecure-skip-tls-verify=true
     
 Once you issue the `oc login` command, you will be prompted for the username and
 password combination for your user account.  This information was provided to
@@ -82,7 +82,7 @@ understand all of the terminology as we will cover it in detail in later labs.
 The first thing we want to do is switch to the *userXX-smoke* project. You
 can do this with the following command:
 
-	$ oc project userXX-smoke
+	oc project userXX-smoke
    
 You will see the following confirmation message:
 
@@ -98,7 +98,7 @@ simple explanation for how routes work is:
 
 In order to view the routes for your *userXX-smoke* project, enter in the following command:
 
-	$ oc get routes
+	oc get routes
     
 You should see output similar to the following:
 	

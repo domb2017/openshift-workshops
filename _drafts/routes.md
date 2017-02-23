@@ -16,23 +16,23 @@ Fortunately, creating a *Route* is a pretty straight-forward process.  You simpl
 `expose` the *Service*. First we want to verify that we don't already have any
 existing routes:
 
-	$ oc get routes
+	oc get routes
         <no output>
 
 Now we need to get the *Service* name to expose:
 
-	$ oc get services
+	oc get services
 
     NAME        CLUSTER_IP      EXTERNAL_IP   PORT(S)    SELECTOR                                   AGE
     guestbook   172.30.83.194   <none>        3000/TCP   app=guestbook,deploymentconfig=guestbook   50s
 
 Once we know the *Service* name, creating a *Route* is a simple one-command task:
 
-	$ oc expose service guestbook
+	oc expose service guestbook
 
 Verify the *Route* was created with the following command:
 
-	$ oc get routes
+	oc get routes
 
     NAME        HOST/PORT                                                            PATH      SERVICE     LABELS          INSECURE POLICY   TLS TERMINATION
     guestbook   guestbook-userXX-guestbook.cloudapps.31test.openshift3roadshow.com             guestbook   app=guestbook

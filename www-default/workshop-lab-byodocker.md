@@ -15,7 +15,7 @@ It's easy to get started with OpenShift whether that be using our app templates 
 > <i class="fa fa-terminal"></i> Goto the terminal and type the following:
 
 {% highlight csh %}
-$ oc new-app kubernetes/guestbook
+oc new-app kubernetes/guestbook
 {% endhighlight %}
 
 
@@ -39,16 +39,16 @@ The output should show something *similar* to below:
 > <i class="fa fa-terminal"></i> Try typing the following to see what is available to 'get':
 
 {% highlight csh %}
-$ oc get
+oc get
 {% endhighlight %}
 
 > <i class="fa fa-terminal"></i> Now let's look at what our image stream has in it
 
 {% highlight csh %}
-$ oc get is
+oc get is
 {% endhighlight %}
 {% highlight csh %}
-$ oc describe is/guestbook
+oc describe is/guestbook
 {% endhighlight %}
 
 <i class="fa fa-info-circle"></i> An image stream can be used to automatically perform an action, such as updating a deployment, when a new image, such as a new version of the guestbook image, is created.
@@ -56,7 +56,7 @@ $ oc describe is/guestbook
 > <i class="fa fa-terminal"></i> The app is running in a pod, let's look at that
 
 {% highlight csh %}
-$ oc describe pods
+oc describe pods
 {% endhighlight %}
 
 ### We can see those details using the web console too
@@ -118,7 +118,7 @@ Click "Create"
 </blockquote>
 
 {% highlight csh %}
-$ oc expose service guestbook
+oc expose service guestbook
 {% endhighlight %}
 
       </div>
@@ -142,7 +142,7 @@ You should see:
 > <i class="fa fa-terminal"></i> Let's clean up all this to get ready for the next lab:
 
 {% highlight csh %}
-$ oc delete all --all
+oc delete all --all
 {% endhighlight %}
 
 

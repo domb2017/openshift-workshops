@@ -65,7 +65,7 @@ Click on Commit changes at the bottom of the screen.
 
 Once you have committed your changes, a Build should almost instantaneously be triggered in OpenShift. Look at the Builds page in the web console, or run the following command to verify:
 
-      $ oc get builds
+      oc get builds
 
 You should see that a new build is running:
 

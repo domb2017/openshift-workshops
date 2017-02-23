@@ -79,19 +79,19 @@ need to modify the *DeploymentConfiguration*.
 First, find the name of the DC:
 
 {% highlight csh %}
-$ oc get dc
+oc get dc
 {% endhighlight %}
 
 Then, use the `oc env` command to set environment variables directly on the DC:
 
 {% highlight csh %}
-$ oc env dc openshift3mlbparks -e MONGODB_USER=mlbparks -e MONGODB_PASSWORD=mlbparks -e MONGODB_DATABASE=mlbparks
+oc env dc openshift3mlbparks -e MONGODB_USER=mlbparks -e MONGODB_PASSWORD=mlbparks -e MONGODB_DATABASE=mlbparks
 {% endhighlight %}
 
 After you have modified the *DeploymentConfig* object, you can verify the environment variables have been added by viewing the JSON document of the configuration:
 
 {% highlight csh %}
-$ oc get dc openshift3mlbparks -o json
+oc get dc openshift3mlbparks -o json
 {% endhighlight %}
 
 You should see the following section:
@@ -173,7 +173,7 @@ passing in the credentials needed to authenticate to the database. First, find
 the name of your MongoDB Pod:
 
 {% highlight csh %}
-$ oc get pods
+oc get pods
 NAME                         READY     STATUS      RESTARTS   AGE
 mongodb-1-dkzsp              1/1       Running     0          10m
 openshift3mlbparks-1-build   0/1       Completed   0          29m
@@ -181,7 +181,7 @@ openshift3mlbparks-2-mxs0r   1/1       Running     0          7m
 {% endhighlight %}
 
 {% highlight csh %}
-$ oc exec -ti mongodb-1-dkzsp -- bash -c 'mongo -u mlbparks -p mlbparks mlbparks'
+oc exec -ti mongodb-1-dkzsp -- bash -c 'mongo -u mlbparks -p mlbparks mlbparks'
 {% endhighlight %}
 
 **Note:** If you used different credentials when you created your MongoDB Pod,

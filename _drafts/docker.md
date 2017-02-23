@@ -25,7 +25,7 @@ server, a log analyzer, and a file service to help manage uploaded files.
 Let's look at the *Pod*s that were deployed as part of the *smoke* application in
 the *userXX-smoke* Project.
 
-	$ oc get pods
+	oc get pods
     
 You should see output similar to the following:
 
@@ -42,7 +42,7 @@ following syntax:
 
 **Note:** Make sure you use the correct *Pod* name from your output.
 
-	$  oc get pod smoke-1-32gkx -o json
+	 oc get pod smoke-1-32gkx -o json
     
 You should see something like the following output (which is have truncated due
 to space considerations of this workshop manual):
@@ -75,7 +75,7 @@ The first thing we want to do is create a new *Project* called `userXX-guestbook
 Remember that Projects group resources together. Ensure that you replace
 `userXX` with your correct user number:
 
-	$ oc new-project userXX-guestbook
+	oc new-project userXX-guestbook
 
 The *new-project* command will automatically switch you to use that *Project*. You
 will see something like the following:
@@ -84,7 +84,7 @@ will see something like the following:
 
 To see all the Projects you have access to, you can simply use `oc get`.
 
-        $ oc get projects
+        oc get projects
  
 You should see a list like the following:
 
@@ -95,7 +95,7 @@ You should see a list like the following:
 With the new *Project* created, in order to tell OpenShift to define and run the
 Docker image, you can simply execute the following command:
 
-	$ oc new-app kubernetes/guestbook
+	oc new-app kubernetes/guestbook
     
 You will see output similar to the following:
 
@@ -127,7 +127,7 @@ Under status you might see *Pending* rather than *Running*.
 
 You can also use the `oc` command line tool to watch for changes in pods:
 
-	$ oc get pods -w
+	oc get pods -w
 
 To exit, hit `Control+C` (`^c`).
 
@@ -189,7 +189,7 @@ Now that we understand the basics of what a *Service* is, let's take a look at t
 deployed.  In order to view the *Services* defined in your Project, enter in the
 following command:
 
-	$ oc get services
+	oc get services
     
 You should see output similar to the following:
 
@@ -204,7 +204,7 @@ change for the life of the *Service*.
 You can also get more detailed information about a *Service* by using the
 following command to display the data in JSON:
 
-	$ oc get service guestbook -o json
+	oc get service guestbook -o json
     
 You should see output similar to the following:
 
@@ -254,7 +254,7 @@ It is also of interest to view the JSON of the *Pod* to understand how OpenShift
 wires components together.  For example, run the following command to get the
 name of your `guestbook` Pod:
 
-    $ oc get pods
+    oc get pods
     
 You should see output similar to the following:
 
@@ -263,7 +263,7 @@ You should see output similar to the following:
 
 Now you can view the detailed data for your *Pod* with the following command:
 
-    $ oc get pod guestbook-1-xaav1 -o json
+    oc get pod guestbook-1-xaav1 -o json
     
 Under the `metadata` section you should see the following:
 
@@ -282,7 +282,7 @@ Under the `metadata` section you should see the following:
 matches the *Selector* will be associated with the *Service*. To see this in
 action, issue the following command:
 
-	$ oc describe service guestbook
+	oc describe service guestbook
     
 You should see the following output:
 

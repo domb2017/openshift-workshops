@@ -80,7 +80,7 @@ The node.js builder template creates a number of resources for you, but what we 
 <i class="fa fa-terminal"></i> Goto the terminal and type the following:
 </blockquote>
 {% highlight csh %}
-$ oc describe bc/dc-metro-map | grep -i webhook
+oc describe bc/dc-metro-map | grep -i webhook
 {% endhighlight %}
 
 <blockquote>
@@ -207,8 +207,8 @@ Well, what if something isn't quite right with the latest version of our app?  L
 <i class="fa fa-terminal"></i> Goto the terminal and type the following:
 </blockquote>
 {% highlight csh %}
-$ oc rollback dc-metro-map-1
-$ oc get pods -w
+oc rollback dc-metro-map-1
+oc get pods -w
 {% endhighlight %}
 
       </div>

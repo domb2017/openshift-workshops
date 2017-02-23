@@ -60,20 +60,20 @@ Don't worry, it's supposed to look empty right now because you currently don't h
 > <i class="fa fa-terminal"></i> Open a terminal and login using the same URI/user/password with following command:
 
 {% highlight csh %}
-$ oc login [URI] --insecure-skip-tls-verify=false
+oc login [URI] --insecure-skip-tls-verify=false
 {% endhighlight %}
 
 > <i class="fa fa-terminal"></i> Check to see what projects you have access to:
 
 {% highlight csh %}
-$ oc get projects
+oc get projects
 {% endhighlight %}
 
 ### It looks empty via the command line too
 > <i class="fa fa-terminal"></i> Type the following command to use the demo project (replace 'demo' with the project you want to use if there isn't a demo project):
 
 {% highlight csh %}
-$ oc new-project demo
+oc new-project demo
 {% endhighlight %}
 
 :information_source: You may recieve the message "Error from server: project "demo" already exists". Try another project name i.e. your first initial and lastname.
@@ -81,7 +81,7 @@ $ oc new-project demo
 > <i class="fa fa-terminal"></i> If you create more than one project, then you can switch projects with the following command:
 
 {% highlight csh %}
-$ oc project [NAME]
+oc project [NAME]
 {% endhighlight %}
 
 ## Help about any command
@@ -91,7 +91,7 @@ To see the full list of commands supported, run `oc help`.
 > <i class="fa fa-terminal"></i> Type the following command to read more information about services, deployment configs, build configurations, and active deployments:
 
 {% highlight csh %}
-$ oc status -h
+oc status -h
 {% endhighlight %}
 
 ## Summary

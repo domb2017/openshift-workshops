@@ -64,7 +64,7 @@ Once you have committed your changes, a *Build* should almost instantaneously be
 triggered in OpenShift. Look at the *Builds* page in the web console, or run the
 following command to verify:
 
-	$ oc get builds
+	oc get builds
 
 You should see that a new build is running:
 
@@ -90,7 +90,7 @@ in the registry.
 
 In order to perform a rollback, you need to know the name of the *Deployment Config*
 which has deployed the application:
-    $ oc get dc
+    oc get dc
 
 The output will be similar to the following:
 
@@ -99,7 +99,7 @@ The output will be similar to the following:
 
 Now run the following command to rollback the latest code change:
 
-    $ oc rollback mlbparks
+    oc rollback mlbparks
 
     #3 rolled back to mlbparks-1
     Warning: the following images triggers were disabled: mlbparks
@@ -112,6 +112,6 @@ original header by viewing the application in your browser.
 to prevent unwanted deployments soon after the rollback is complete. To re-enable
 the automatic deployments run this:
 
-    $ oc deploy mlbparks --enable-triggers
+    oc deploy mlbparks --enable-triggers
 
 **End of Lab 9**

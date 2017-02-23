@@ -41,7 +41,7 @@ There is a lot more information about [Services](https://docs.openshift.com/ente
 
 Now that we understand the basics of what a Service is, let's take a look at the Service that was created for the kubernetes/guestbook image that we just deployed. In order to view the Services defined in your Project, enter in the following command:
 
-    $ oc get services
+    oc get services
 
 ![OC Get Services Command]({{ site.url }}/images/2016/02/oc-get-services.png)
 
@@ -49,7 +49,7 @@ In the above output, we can see that we have a Service named `guestbook` with an
 
 You can also get more detailed information about a Service by using the following command to display the data in JSON:
 
-    $ oc get service guestbook -o json
+    oc get service guestbook -o json
 
 ![OC Get Service JSON Command]({{ site.url }}/images/2016/02/oc-get-service-json.png)
 
@@ -59,13 +59,13 @@ You can also get more detailed information about a Service by using the followin
 
 It is also of interest to view the JSON of the Pod to understand how OpenShift wires components together. For example, run the following command to get the name of your `guestbook` Pod:
 
-    $ oc get pods
+    oc get pods
 
 ![OC Get Pods Command]({{ site.url }}/images/2016/02/oc-get-pods-guestbook.png)
 
 Now you can view the detailed data for your Pod with the following command:
 
-    $ oc get pod guestbook-1-dtv0m -o json
+    oc get pod guestbook-1-dtv0m -o json
 
 Under the `metadata` section you should see the following:
 
@@ -75,7 +75,7 @@ The service selector stanza refers to `app=guestbook` and `deploymentconfig=gues
 
 Meaning, labels are just key/value pairs. Any Pod in this Project that has a label that matches the selector will be associated with the service. To see this in action, try it out.
 
-    $ oc describe service guestbook
+    oc describe service guestbook
 
 ![OC Describe Service Command]({{ site.url }}/images/2016/02/oc-describe-service-guestbook.png)
 
@@ -101,26 +101,26 @@ Fortunately, creating a Route is a pretty straight-forward process. You simply e
 
 Now we need to get the Service name to expose:
 
-    $ oc get routes
+    oc get routes
       <no output>
 
 ![OC Get Routes Command]({{ site.url }}/images/2016/02/oc-get-routes.png)
 
 Now we need to get the Service name to expose:
 
-    $ oc get services
+    oc get services
 
 ![OC Get Services Guestbook Command]({{ site.url }}/images/2016/02/oc-get-services-guestbook.png)
 
 Once we know the Service name, creating a Route is a simple one-command task:
 
-    $ oc expose service guestbook
+    oc expose service guestbook
 
 ![OC Expose Service Guestbook Command]({{ site.url }}/images/2016/02/oc-expose-service-guestbook.png)
 
 Verify the Route was created with the following command:
 
-    $ oc get routes
+    oc get routes
 
 ![OC Get Routes Command]({{ site.url }}/images/2016/02/oc-get-routes-guestbook.png)
 

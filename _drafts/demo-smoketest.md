@@ -19,9 +19,9 @@ Possible resources are all OpenShift resources (builds, buildConfigs, deployment
 Let's look at the Pods that were deployed as part of the smoke application in the smoketest project.
 
     # Switch to the 'smoketest' project
-    $ oc project smoketest
+    oc project smoketest
 
-    $ oc get pods
+    oc get pods
 
 You should see output similar to the following:
 
@@ -31,7 +31,7 @@ The above output lists all of the Pods in the current Project, including the Pod
 
 To make the output readable, I suggest changing the output type to JSON using the following syntax:
 
-    $ oc get pod smoke-1-d36u2 -o json
+    oc get pod smoke-1-d36u2 -o json
 
 :warning: Make sure you use the correct Pod name from your output.
 
@@ -41,8 +41,8 @@ Which should output something like so (truncated).
 
 Other commands to explore include:
 
-    $ oc get replicationController
-    $ oc get service
+    oc get replicationController
+    oc get service
 
 # Deploy a Docker Image
 
@@ -50,7 +50,7 @@ Let's start by doing the simplest thing possible - get a plain old Docker image 
 
 Again, the first thing we want to do is create a new project called `guestbook`.
 
-    $ oc new-project guestbook
+    oc new-project guestbook
 
 :information_source: Remember projects group resources together.
 
@@ -62,7 +62,7 @@ Which outputs something similar to the folowing:
 
 Run the Docker image in OpenShift by creating a new application in the `guestbook` project.
 
-    $ oc new-app kubernetes/guestbook
+    oc new-app kubernetes/guestbook
 
 The output should be similar to the following screenshot.
 
@@ -111,7 +111,7 @@ You can check on the status of the image download and deployment by:
 
 You can also use the `oc` command line tool to watch for changes in pods:
 
-    $ oc get pods -w
+    oc get pods -w
 
 To exit hit **Control+c**, **CTRL+c**, or **^c**.
 

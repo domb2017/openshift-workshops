@@ -55,7 +55,7 @@ The first thing you need to do is create a new project called `userXX-mlbparks`:
 **Note:** Remember to replace userXX-mlbparks with your correct user number.
 
 {% highlight csh %}
-$ oc new-project userXX-mlbparks
+oc new-project userXX-mlbparks
 {% endhighlight %}
 
 You should see the following output:
@@ -133,7 +133,7 @@ the application. You can see all of this happening in real time!
 From the command line, you can also see the *Builds*:
 
 {% highlight csh %}
-$ oc get builds
+oc get builds
 {% endhighlight %}
 
 You'll see output like:
@@ -146,7 +146,7 @@ openshift3mlbparks-1   Source    Git@master   Running    3 minutes ago        1m
 You can also view the build logs with the following command:
 
 {% highlight csh %}
-$ oc build-logs openshift3mlbparks-1
+oc build-logs openshift3mlbparks-1
 {% endhighlight %}
 
 After the build has completed and successfully:
@@ -172,7 +172,7 @@ application this way, OpenShift also creates a *Route* for you. You can see the
 URL in the web console, or via the command line:
 
 {% highlight csh %}
-$ oc get routes
+oc get routes
 {% endhighlight %}
 
 Where you should see something like the following:

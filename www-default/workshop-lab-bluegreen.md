@@ -19,8 +19,8 @@ You should be comfortable deploying an app at this point, but here are the steps
 > <i class="fa fa-terminal"></i> Goto the terminal and type these commands:
 
 {% highlight csh %}
-$ oc new-app --name=green [your-project-repo-url]
-$ oc expose service green
+oc new-app --name=green [your-project-repo-url]
+oc expose service green
 {% endhighlight %}
 
 Note that we exposed this application using a route named "green". Navigate to your application and validate it deployed correctly.
@@ -37,7 +37,7 @@ Use the same commands to deploy this new version of the app, but this time name 
 > <i class="fa fa-terminal"></i> Goto the terminal and type these commands:
 
 {% highlight csh %}
-$ oc new-app --name=blue [your-project-repo-url]
+oc new-app --name=blue [your-project-repo-url]
 {% endhighlight %}
 
 
@@ -60,7 +60,7 @@ Now that we are satisfied with our change we can do the Blue/Green switch.  With
 <i class="fa fa-terminal"></i> Goto the terminal and type the following:
 </blockquote>
 {% highlight csh %}
-$ oc edit route green
+oc edit route green
 {% endhighlight %}
 
 This will bring up the Route configuration yaml. Edit the element spec: to: name and change it's value from "green" to "blue".
@@ -100,7 +100,7 @@ Edit the YAML element spec: to: name: and change the value from "green" to "blue
 > <i class="fa fa-terminal"></i> Let's clean up all this to get ready for the next lab:
 
 {% highlight csh %}
-$ oc delete all -l subproject=dc-busses
+oc delete all -l subproject=dc-busses
 {% endhighlight %}
 -->
 

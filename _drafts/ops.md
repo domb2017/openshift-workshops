@@ -27,10 +27,10 @@ Coming soon...
 <i class="fa fa-terminal"></i> Try the following:
 </blockquote>
 {% highlight csh %}
-$ oc get nodes
-$ oc describe nodes
-$ oc get cs
-$ oc get events
+oc get nodes
+oc describe nodes
+oc get cs
+oc get events
 {% endhighlight %}
 
 
@@ -50,7 +50,7 @@ Quotas let you specify hard limits per project on the creation of various object
 <i class="fa fa-terminal"></i> Try the following:
 </blockquote>
 {% highlight csh %}
-$ oc describe quota
+oc describe quota
 {% endhighlight %}
 
 <i class="fa fa-info-circle"></i> You can read more about quotas [here][4]
@@ -61,7 +61,7 @@ Resource Limits (aka LimitRanges) let you specify the amount of CPU or memory re
 <i class="fa fa-terminal"></i> Try the following:
 </blockquote>
 {% highlight csh %}
-$ oc describe limits
+oc describe limits
 {% endhighlight %}
 
 <i class="fa fa-info-circle"></i> You can read more about resource limits [here][5]

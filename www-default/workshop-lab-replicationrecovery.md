@@ -30,14 +30,14 @@ Let's walk through a simple example of how the replication controller can keep y
 <i class="fa fa-terminal"></i> Goto the terminal and try the following:
 </blockquote>
 {% highlight csh %}
-$ oc scale --replicas=4 dc/dc-metro-map
+oc scale --replicas=4 dc/dc-metro-map
 {% endhighlight %}
 
 <blockquote>
 <i class="fa fa-terminal"></i> Check out the new pods:
 </blockquote>
 {% highlight csh %}
-$ oc get pods
+oc get pods
 {% endhighlight %}
 
 Notice that you now have 4 unique pods availble to inspect.  If you want go ahead and inspect them you can see that each have their own IP address and logs (oc describe).
@@ -97,14 +97,14 @@ OK, now that we have a slightly more interesting desired replication state, we c
 <i class="fa fa-terminal"></i> Choose a random pod and delete it:
 </blockquote>
 {% highlight csh %}
-$ oc get pods
-$ oc delete pod/PODNAME
-$ oc get pods -w
+oc get pods
+oc delete pod/PODNAME
+oc get pods -w
 {% endhighlight %}
 
 If you're fast enough you'll see the pod you deleted go "Terminating" and you'll also see a new pod immediately get created and from "Pending" to "Running".  If you weren't fast enough you can see that your old pod is gone and a new pod is in the list with an age of only a few seconds.
 
-<br/><br/><i class="fa fa-info-circle"></i>  You can see the more details about your replication controller with: $ oc describe rc
+<br/><br/><i class="fa fa-info-circle"></i>  You can see the more details about your replication controller with: oc describe rc
 
       </div>
     </div>
@@ -163,8 +163,8 @@ In addition to the health of your application's pods, Open Shift will watch the 
 <i class="fa fa-terminal"></i> Choose a running pod and shell into it:
 </blockquote>
 {% highlight csh %}
-$ oc get pods
-$ oc exec PODNAME -it /bin/bash
+oc get pods
+oc exec PODNAME -it /bin/bash
 {% endhighlight %}
 
 You are now executing a bash shell running in the container of the pod.  Let's kill our webapp and see what happens.
@@ -174,7 +174,7 @@ You are now executing a bash shell running in the container of the pod.  Let's k
 <i class="fa fa-terminal"></i> Choose a running pod and shell into its container:
 </blockquote>
 {% highlight csh %}
-$ pkill -9 node
+pkill -9 node
 {% endhighlight %}
 
 This will kick you out off the container with an error like "Error executing command in container"
@@ -188,7 +188,7 @@ This will kick you out off the container with an error like "Error executing com
 <i class="fa fa-terminal"></i> Watch for the container restart
 </blockquote>
 {% highlight csh %}
-$ oc get pods -w
+oc get pods -w
 {% endhighlight %}
 
 If a container dies multiple times quickly, Open Shift is going to put the pod in a CrashBackOff state.  This ensures the system doesn't waste resources trying to restart containers that are continuously crashing.
@@ -214,7 +214,7 @@ Navigate to browse the pods list, and click on a running pod
 In the tab bar for this pod, click on "Terminal"
 </blockquote>
 <blockquote>
-Click inside the terminal view and type $ pkill -9 node
+Click inside the terminal view and type pkill -9 node
 </blockquote>
 <p><img alt="OpenShift Process Kill Node Terminal Command" src="{{ site.baseurl }}/www-default/screenshots/ose-lab-replicationrecovery-terminal.png" width="400"/></p>
 

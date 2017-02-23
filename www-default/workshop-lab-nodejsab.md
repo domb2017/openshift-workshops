@@ -2,7 +2,7 @@
 layout: lab
 title: A/B Testing
 subtitle: Using HAProxy to A/B Test
-html_title: AB Test
+html_title: A/B Test Example
 categories: [lab, labels, selectors, annotations, ops]
 next: workshop-finally.html
 previous: workshop-lab-templates.html
@@ -21,14 +21,13 @@ This demo will show how to use OpenShift's built in HAProxy capabilities to load
 
 Create basic node.js web app w/ git repo from a previous commit.
 
-    oc new-project balanced
-    oc new-app https://github.com/kyle-benson/ocp-nodejs-demo.git#b69a1b0f0c3195baa0dbd2ff600f8bebc38c7ade --name='app1'
+    oc new-app https://github.com/kyle-benson/ocp-nodejs-demo.git#b69a1b0f0c3195baa0dbd2ff600f8bebc38c7ade --name='appa'
 
 :warning: Do not create a route automatically for this exercise.
 
 Create a route to the deployed application.
 
-    oc expose svc/app1 --name="appab" --hostname=appab-balanced.master.kbenson.co
+    oc expose svc/appa --name="appab" --hostname=appab.
 
 Begin using `curl` against the newly exposed route.
 

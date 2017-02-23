@@ -34,7 +34,7 @@ start to explore scaling in OpenShift 3. Take a look at the
 *ReplicationController* (RC) that was created for you when you told OpenShift to
 stand up the `guestbook` image:
 
-    $ oc get rc
+    oc get rc
 
     CONTROLLER    CONTAINER(S)   IMAGE(S)                                                                                       SELECTOR                                                          REPLICAS   AGE
     guestbook-1   guestbook      kubernetes/guestbook@sha256:a49fe18bb57c8eee16e2002987e041f5ae9b5b70ae7b3d49eb60e5c26b9c6bd0   app=guestbook,deployment=guestbook-1,deploymentconfig=guestbook   1          13m
@@ -42,12 +42,12 @@ stand up the `guestbook` image:
 Again, to get more details (once you know the name of RC), you can use the
 following command:
 
-    $ oc get rc guestbook-1 -o json
+    oc get rc guestbook-1 -o json
 
 For example, if you just want to see how many replicas are defined for the
 `guestbook` image, you can enter in the following command:
 
-    $ oc get rc guestbook-1 -o json | grep -B1 -E "replicas" | grep -v Docker
+    oc get rc guestbook-1 -o json | grep -B1 -E "replicas" | grep -v Docker
 
 **Note:** The above command uses the *grep* utility which may not be available on your operating system.  
 
@@ -75,19 +75,19 @@ Let's scale our guestbook "application" up to 3 instances. We can do this with
 the `scale` command. You could also do this by clicking the "up" arrow next to
 the *Pod* in the OpenShift web console.
 
-	$ oc scale --replicas=3 rc guestbook-1
+	oc scale --replicas=3 rc guestbook-1
 
 To verify that we changed the number of replicas by modifying the RC object,
 issue the following command:
 
-	$ oc get rc
+	oc get rc
 
     CONTROLLER    CONTAINER(S)   IMAGE(S)                                                                                       SELECTOR                                                          REPLICAS   AGE
     guestbook-1   guestbook      kubernetes/guestbook@sha256:a49fe18bb57c8eee16e2002987e041f5ae9b5b70ae7b3d49eb60e5c26b9c6bd0   app=guestbook,deployment=guestbook-1,deploymentconfig=guestbook   3          13m
 
 You can see that we now have 3 replicas.  Let's verify that with the `oc get pods` command:
 
-	$ oc get pods
+	oc get pods
 
         NAME                READY     REASON    RESTARTS   AGE
         guestbook-1-a163w   1/1       Running   0          1m
@@ -96,7 +96,7 @@ You can see that we now have 3 replicas.  Let's verify that with the `oc get pod
 
 And lastly, let's verify that the *Service* that we learned about in the previous lab accurately reflects three endpoints:
 
-	$ oc describe service guestbook
+	oc describe service guestbook
 
 You will see something like the following output:
 

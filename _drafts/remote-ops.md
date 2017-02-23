@@ -14,7 +14,7 @@ OpenShift allows establishing remote shell sessions to a container without the n
 to run an SSH service inside each container. In order to SSH into a container, you
 can use the *oc rsh* command. First get the list of available pods:
 
-    $ oc get pods
+    oc get pods
 
 You should an output similar to the following:
 
@@ -23,10 +23,10 @@ You should an output similar to the following:
 
 Now you can establish a remote shell session into the pod by using the pod name:
 
-  	$ oc rsh guestbook-1-oc7ey /bib/sh
+  	oc rsh guestbook-1-oc7ey /bib/sh
 
 You would see the following output:
-    [demo@openshift ~]$ oc rsh guestbook-1-oc7ey /bin/sh
+    oc rsh guestbook-1-oc7ey /bin/sh
 
     BusyBox v1.21.1 (Ubuntu 1:1.21.0-1ubuntu1) built-in shell (ash)
     Enter 'help' for a list of built-in commands.
@@ -38,7 +38,7 @@ after the pod name in the issued command.
 Run the following command to list the static files for the guestbook application
 within the container:
 
-    $ ls public/
+    ls public/
 
     index.html  script.js   style.css
 
@@ -51,7 +51,7 @@ already running container using the *oc exec* command.
 In order the get the list of files in the *public* directory of the container,
 run the following:
 
-    $ oc exec guestbook-1-oc7ey ls public
+    oc exec guestbook-1-oc7ey ls public
 
     index.html
     script.js
@@ -59,7 +59,7 @@ run the following:
 
 You can also specify the shell commands to run directly with the *oc rsh* command:
 
-    $ oc rsh guestbook-1-oc7ey ls public
+    oc rsh guestbook-1-oc7ey ls public
 
     index.html  script.js   style.css
 

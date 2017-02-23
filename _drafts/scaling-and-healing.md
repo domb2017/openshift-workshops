@@ -32,29 +32,29 @@ There are some edge cases where you might want some Pods and an RC without a DC 
 
 Now that we know what a ReplicatonController and DeploymentConfig are, we can start to explore scaling in OpenShift 3. Take a look at the ReplicationController (RC) that was created for you when you told OpenShift to stand up the `hexboard` image:
 
-    $ oc get rc
+    oc get rc
 
 ![OC Get RC]({{ site.url }}/images/2016/02/oc-get-rc.png)
 
 Get more detail about the RCs, by issuing the following commands:
 
     # Hexboard RC
-    $ oc get rc hexboard-1 -o json
+    oc get rc hexboard-1 -o json
 
 ![OC Get RC Hexboard]({{ site.url }}/images/2016/02/oc-get-rc-json-hexboard.png)
 
     # Sketchpod RC
-    $ oc get rc sketchpod-1 -o json
+    oc get rc sketchpod-1 -o json
 
 ![OC Get RC Sketchpod]({{ site.url }}/images/2016/02/oc-get-rc-json-sketchpod.png)
 
 For example, if you just want to see how many replicas are defined for the `hexboard` image, you can enter in the following command:
 
-    $ oc get rc hexboard-1 -o json | grep -B1 -E "replicas" | grep -v Docker
+    oc get rc hexboard-1 -o json | grep -B1 -E "replicas" | grep -v Docker
 
 ![OC RC Hexboard Grep Docker]({{ site.url }}/images/2016/02/oc-get-rc-hexboard-grep-docker.png)
 
-    $ oc get rc sketchpod-1 -o json | grep -B1 -E "replicas" | grep -v Docker
+    oc get rc sketchpod-1 -o json | grep -B1 -E "replicas" | grep -v Docker
 
 ![OC RC Sketchpod Grep Docker]({{ site.url }}/images/2016/02/oc-get-rc-sketchpod-grep-docker.png)
 
@@ -68,11 +68,11 @@ You can learn more about the tech-preview CPU-based Horizontal Pod Autoscaler by
 
 Let's scale our `sketchpod` application up to three instances. We can do this with the `scale` command.
 
-$ oc scale --replicas=3 rc hexboard-1
+oc scale --replicas=3 rc hexboard-1
 
 ![OC Scale Hexboard]({{ site.url }}/images/2016/02/oc-scale-hexboard.png)
 
-    $ oc scale --replicas=3 rc sketchpod-1
+    oc scale --replicas=3 rc sketchpod-1
 
 ![OC Scale Sketchpod]({{ site.url }}/images/2016/02/oc-scale-sketchpod.png)
 
@@ -80,23 +80,23 @@ $ oc scale --replicas=3 rc hexboard-1
 
 To verify that we changed the number of replicas by modifying the RC object, issue the following command:
 
-    $ oc get rc
+    oc get rc
 
 ![OC Get RC Post Scale]({{ site.url }}/images/2016/02/oc-get-rc-post-scale.png)
 
 You can see that we now have 3 replicas. Let's verify that with the oc get pods command:
 
-    $ oc get pods
+    oc get pods
 
 ![OC Get Pods Post Scale]({{ site.url }}/images/2016/02/oc-get-pods-post-scale.png)
 
 And lastly, let's verify that the Service that we learned about in the previous lab accurately reflects three endpoints:
 
-    $ oc describe service hexboard
+    oc describe service hexboard
 
 ![OC Describe Service Hexboard]({{ site.url }}/images/2016/02/oc-describe-service-hexboard.png)
 
-    $ oc describe service sketchpod
+    oc describe service sketchpod
 
 ![OC Describe Service Sketchpod]({{ site.url }}/images/2016/02/oc-describe-service-sketchpod.png)
 
@@ -112,11 +112,11 @@ Because OpenShift's RCs are constantly monitoring to see that the desired number
 
 Since we have three Pods running right now, let's see what happens if we "accidentally" kill one. Run the `oc get pods` command again, and choose a pod to kill. :smirk_cat:
 
-    $ oc delete pod hexboard-1-1439h
+    oc delete pod hexboard-1-1439h
 
 Then, as fast as you can, do the following:
 
-    $ oc get pods
+    oc get pods
 
 Did you notice anything different? The names of the Pods are slightly changed. That's because OpenShift almost immediately detected that the current state (2 Pods) didn't match the desired state (3 Pods), and it fixed it by scheduling another pod.
 

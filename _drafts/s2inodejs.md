@@ -28,8 +28,8 @@ We can do this either via the command line (CLI) or the web console.  You decide
 <i class="fa fa-terminal"></i> Goto the terminal and type the following:
 </blockquote>
 {% highlight csh %}
-$ oc new-app --name=webapp http://openshift.example.com:3000/demo/openshiftexamples-nodemongo.git#offline
-$ oc expose service webapp
+oc new-app --name=webapp http://openshift.example.com:3000/demo/openshiftexamples-nodemongo.git#offline
+oc expose service webapp
 {% endhighlight %}
 
 <i class="fa fa-info-circle"></i> Open Shift auotmatically detected the source code type and selected the nodejs builder image
@@ -105,13 +105,13 @@ We can see the details of what the S2I builder did.  This can be helpful to diag
 </blockquote>
 
 {% highlight csh %}
-$ oc get builds
+oc get builds
 {% endhighlight %}
 
 In the output, note the name of your build and use it to see the logs with:
 
 {% highlight csh %}
-$ oc logs builds/[BUILD_NAME]
+oc logs builds/[BUILD_NAME]
 {% endhighlight %}
 
 The console will print out the full log for your build.  Note, you could pipe this to more or less for easier viewing in the CLI.
@@ -171,7 +171,7 @@ Let's see this app in action!
 </blockquote>
 
 {% highlight csh %}
-$ oc get routes
+oc get routes
 {% endhighlight %}
 
 <blockquote>

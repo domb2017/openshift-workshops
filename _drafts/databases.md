@@ -22,7 +22,7 @@ We can easily add a database pod into OpenShift wrapped in a service for other p
       <div class="panel-body">
 <i class="fa fa-terminal"></i> Goto the terminal and type the following:
 {% highlight csh %}
-$ oc new-app --template=mongodb-ephemeral
+oc new-app --template=mongodb-ephemeral
 {% endhighlight %}
 
 You should see an output similar to:
