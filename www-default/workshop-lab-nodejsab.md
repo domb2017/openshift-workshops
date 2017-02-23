@@ -1,6 +1,6 @@
 ---
 layout: lab
-title: A/B Testing
+title: A/B Testing with HAProxy
 subtitle: Using HAProxy to A/B Test
 html_title: A/B Test Example
 categories: [lab, labels, selectors, annotations, ops]
@@ -27,28 +27,26 @@ Create basic node.js web app w/ git repo from a previous commit.
 
 Create a route to the deployed application.
 
-    oc expose svc/appa --name="appab" --hostname=appab.
+    oc expose svc/appa --name="appab" -l app=appab
 
-Begin using `curl` against the newly exposed route.
+Goto the terminal and begin using `curl` against the newly exposed route.
 
-
-    while true; do curl appab-balanced.master.kbenson.co && echo && sleep 5; done
+    while true; do curl $(oc get -o jsonpath="{.spec.host}" route appab) && echo && sleep 5; done
 
 :information_source: Keep this command alive (it'll be used later on in this lab).
 
-Update the current Route's annotation.
+Update the current appab route annotation (optional).
 
-    oc get routes
     oc annotate route/appab haproxy.router.openshift.io/balance=roundrobin
 
 Create second nodejs app from new branch or updated commit.
 
-    oc new-app https://github.com/kyle-benson/ocp-nodejs-demo.git --name="app2"
+    oc new-app https://github.com/kyle-benson/ocp-nodejs-demo.git --name="appb"
 
-Setup route to load balance between `appA` & `appB`.
+Setup route to load balance between `appa` & `appb`.
 
 > **Routes** > **Edit** > **Split Traffic**.
 
   ![ocp route gif](screenshots/ocp_AB_routes.gif "Enabling an AB route in the UI")
 
-Observe the previous started while loop, notice anything different?
+Observe the previous started while loop that uses `curl`, notice anything different?

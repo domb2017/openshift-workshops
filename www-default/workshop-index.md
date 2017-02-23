@@ -35,6 +35,6 @@ html_title: Workshops
 
 ### [Lab: Application Templates](workshop-lab-templates.html)
 
-### [Lab: AB Testing with HAProxy](workshop-lab-nodejsab.html)
+### [Lab: A/B Testing](workshop-lab-nodejsab.html)
 
 ### [Fin.](workshop-finally.html)
