@@ -1,9 +1,10 @@
 ---
 layout: lab
 title: Workshop Prerequisites
-subtitle: Make sure you have done the following before starting the workshop labs
+subtitle: Make sure you've done the following before starting
 html_title: Prerequisites
 categories: [developers, developers]
+next: workshop-lab-welcome.html
 ---
 
 

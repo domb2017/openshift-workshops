@@ -1,9 +1,11 @@
 ---
 layout: lab
 title: Blue-green Deployment
-subtitle:
+subtitle: Lets be strategic about deployment
 html_title: Blue/Green
 categories: [lab, ops, blue, green]
+next: workshop-lab-xpaas-kitchensink.html
+previous: workshop-lab-cicd.html
 ---
 
 ## Blue/Green deployments

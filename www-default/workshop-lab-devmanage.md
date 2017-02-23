@@ -4,6 +4,8 @@ title: Developing and Managing Your Application
 subtitle: This will come in handy
 html_title: App Development
 categories: [lab, developers]
+next: workshop-lab-rollbacks.html
+previous: workshop-lab-s2i.html
 ---
 
 ## Developing and managing an application in Open Shift

@@ -1,9 +1,11 @@
 ---
 layout: lab
 title: Adding a Database (MongoDB)
-subtitle:
+subtitle: Connecting the front-end & database
 html_title: Database
 categories: [lab, ops, database, app, mongodb]
+next: workshop-lab-templates.html
+previous: workshop-lab-jboss.html
 ---
 
 Most useful applications are "stateful" or "dynamic" in some way, and this is

@@ -4,6 +4,8 @@ title: Webhooks and Rollbacks
 subtitle: A bit more automation can't hurt
 html_title: Webhooks and Rollbacks
 categories: [lab, developers, ops, rollback]
+next: workshop-lab-replicationrecovery.html
+previous: workshop-lab-devmanage.html
 ---
 
 ## Build Triggers, Webhooks and Rollbacks - Oh My!

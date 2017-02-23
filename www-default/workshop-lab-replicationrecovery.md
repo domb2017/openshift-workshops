@@ -1,9 +1,11 @@
 ---
 layout: lab
 title: Replication and Recovery
-subtitle: the site's dow... oh nevermind, it's good
+subtitle: The site's dow... oh nevermind, it's good
 html_title: Replication and Recovery
 categories: [lab, ops]
+next: workshop-lab-labels.html
+previous: workshop-lab-rollbacks.html
 ---
 
 ## Things will go wrong, and that's why we have replication and recovery

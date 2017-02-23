@@ -1,9 +1,11 @@
 ---
 layout: lab
 title: CI | CD Pipelines
-subtitle:
+subtitle: Jenkins plugin compatibility
 html_title: CI/CD
 categories: [lab, developers, ops]
+next: workshop-lab-bluegreen.html
+previous: workshop-lab-labels.html
 ---
 
 ## Overview

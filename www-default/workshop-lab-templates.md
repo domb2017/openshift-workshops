@@ -1,9 +1,11 @@
 ---
 layout: lab
 title: Application Templates
-subtitle:
+subtitle: Why not make things even easier?
 html_title: Templates
 categories: [lab, ops, app, template]
+next: workshop-lab-nodejsab.html
+previous: workshop-lab-databases.html
 ---
 
 ## Application templates

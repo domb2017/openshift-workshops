@@ -11,8 +11,6 @@ html_title: Workshops
 
 ### [Lab: Login and a Tour of OpenShift Enterprise](workshop-lab-welcome.html)
 
-<!-- ### [Lab: Smoke Test (Hexboard)](workshop-lab-hexboard.html) -->
-
 ### [Lab: BYO Docker](workshop-lab-byodocker.html)
 
 ### [Lab: Deploying an App with S2I](workshop-lab-s2i.html)
@@ -27,13 +25,11 @@ html_title: Workshops
 
 ### [Lab: CI | CD Pipelines](workshop-lab-cicd.html)
 
-<!-- ### [Lab: Pipeline Deployment with Jenkins](workshop-lab-pipeline-jenkins.html) -->
-
 ### [Lab: Blue-green Deployment](workshop-lab-bluegreen.html)
 
-### [Lab: xPaaS (JBoss EAP) - Kitchen Sink](workshop-lab-xpaas-kitchensink.html)
+### [Lab: xPaaS Quick Start](workshop-lab-xpaas-kitchensink.html)
 
-### [Lab: xPaaS (JBoss EAP)](workshop-lab-jboss.html)
+### [Lab: JBoss EAP Application](workshop-lab-jboss.html)
 
 ### [Lab: Adding a Database](workshop-lab-databases.html)
 
@@ -42,20 +38,3 @@ html_title: Workshops
 ### [Lab: AB Testing with HAProxy](workshop-lab-nodejsab.html)
 
 ### [Fin.](workshop-finally.html)
-
-<!--
-### [Lab: CI | CD Pipelines](workshop-lab-cicd.html)
-
-### [Lab: Keep it Secret, Keep it Safe](workshop-secrets.html)
-
-### [Lab: Working with Storage](workshop-lab-storage.html)
-
-### [Lab: xPaaS on OpenShift](workshop-lab-xpaas.html)
-
-### [Lab: Operations](workshop-lab-ops.html)
-
-### [Lab: Operations](workshop-lab-nodeselectors.html)
-
-### [Homework](workshop-homework.html)
-
--->

@@ -4,6 +4,8 @@ title: A/B Testing
 subtitle: Using HAProxy to A/B Test
 html_title: AB Test
 categories: [lab, labels, selectors, annotations, ops]
+next: workshop-finally.html
+previous: workshop-lab-templates.html
 ---
 
 ### What's A/B Testing?

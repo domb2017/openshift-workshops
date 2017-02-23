@@ -1,23 +1,16 @@
 ---
 layout: lab
-title: xPaaS (JBoss EAP) - Kitchen Sink
-subtitle:
-html_title: xPaaS (JBoss EAP) - Kitchen Sink
+title: JBoss Kitchen Sink
+subtitle: xPaaS "Hello World" Example
+html_title: xPaaS Quick Start
 categories: [lab, ops]
+next: workshop-lab-jboss.html
+previous: workshop-lab-bluegreen.html
 ---
 
+### Introduction
 
-
-
-
-
-### Let's Login
-
->Navigate to the URI provided by your instructor and log in with the user/password provided.
-
-<p><img alt="login to OSE" src="{{ site.baseurl }}/www-default/screenshots/ose-lab-xpaas-login.png" width="500"/></p>
-
-
+The quickstarts demonstrate JBoss EAP, Java EE 7 and a few additional technologies. They provide small, specific, working examples that can be used as a reference for your own project.
 
 ### Let's Execute the S2I xPaaS JBoss EAP Build Pipeline and Deploy
 

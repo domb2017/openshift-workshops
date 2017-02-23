@@ -4,6 +4,8 @@ title: BYO Docker
 subtitle: Deploy an existing docker image
 html_title: BYO Dockerfile
 categories: [lab, developers, docker]
+next: workshop-lab-s2i.html
+previous: workshop-lab-welcome.html
 ---
 
 ## Bring your own Docker

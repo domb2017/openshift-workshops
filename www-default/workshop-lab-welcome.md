@@ -4,6 +4,8 @@ title: A Guided Tour of OpenShift Enterprise
 subtitle: Welcome to OpenShift
 html_title: Welcome to OpenShift
 categories: [lab, intro, welcome, developers, ops]
+next: workshop-lab-byodocker.html
+previous: workshop-prerequisites.html
 ---
 
 ## Welcome to Open Shift!

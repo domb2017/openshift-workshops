@@ -1,9 +1,11 @@
 ---
 layout: lab
-title: Deploying Java Code on JBoss
-subtitle:
+title: Deploying Java Code on JBoss EAP
+subtitle: MLB Parks Application
 html_title: JBoss
 categories: [lab, developers, xpaas, developers, jboss]
+next: workshop-lab-databases.html
+previous: workshop-lab-xpaas-kitchensink.html
 ---
 
 ## Background: Source-to-Image (S2I)

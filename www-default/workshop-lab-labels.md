@@ -1,9 +1,11 @@
 ---
 layout: lab
 title: Labels
-subtitle: Without all the stickiness
+subtitle: I like to organize things my way
 html_title: Labels
 categories: [lab, labels, selectors, annotations, ops]
+next: workshop-lab-cicd.html
+previous: workshop-lab-replicationrecovery.html
 ---
 
 ## Labels
