@@ -1,0 +1,22 @@
+{% if page.previous and page.next %}
+  <ul class="pager">
+    <li class="previous"><a href="{{ page.previous }}"><span aria-hidden="true"><i class="fa fa-chevron-left"></i> </span>PREV</a></li>
+    <li class="text-center"><a href="workshop-index.html">LABS INDEX</a></li>
+    <li class="next"><a href="{{ page.next }}">NEXT <span aria-hidden="true"><i class="fa fa-chevron-right"></i></span></a></li>
+  </ul>
+{% elsif page.next %}
+  <ul class="pager">
+    <li class="text-center"><a href="workshop-index.html">LABS INDEX</a></li>
+    <li class="next"><a href="{{ page.next }}">NEXT <span aria-hidden="true"><i class="fa fa-chevron-right"></i></span></a></li>
+  </ul>
+{% elsif page.previous %}
+  <ul class="pager">
+    <li class="text-center"><a href="workshop-index.html">LABS INDEX</a></li>
+    <li class="previous"><a href="{{ page.previous }}"><span aria-hidden="true"><i class="fa fa-chevron-left"></i> </span>PREV</a></li>
+  </ul>
+{% else %}
+  <ul class="pager">
+    <li class="text-center"><a href="workshop-index.html">LABS INDEX</a></li>
+    <li class="next"><a href="{{ site.baseurl }}/">HOME <span aria-hidden="true"><i class="fa fa-chevron-right"></i></span></a></li>
+  </ul>
+{% endif %}
